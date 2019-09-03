@@ -25,6 +25,9 @@ kml.document.name = "Donations to Panoptykon Foundation in 2016 by city"
 for city, donation in donations.items():
     lat = locations[city][0]
     lon = locations[city][1]
-    point = kml.newpoint(name=city, coords=[(lon, lat)], description=str(donation))
+    point = kml.newpoint(
+            name=city, coords=[(lon, lat)],
+            description='{:.2f} PLN'.format(donation)
+        )
 
 kml.save("donations_by_city.kml")
