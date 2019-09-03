@@ -96,7 +96,7 @@
     });
     if (feature) {
       info.tooltip('hide')
-        .attr('data-original-title', feature.get('name'))
+        .attr('data-original-title', feature.get('name') + "\n" + feature.get('description') )
         .tooltip('fixTitle')
         .tooltip('show');
     } else {
